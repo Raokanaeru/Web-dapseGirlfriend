@@ -1,3 +1,15 @@
+/* Root Variables */
+:root {
+    --neon-cyan: #00f3ff;
+    --neon-magenta: #ff00aa;
+    --dark-bg: #121212;
+    --light-bg: #f0f0f0;
+    --font-color-light: #e0e0e0;
+    --font-color-dark: #121212;
+    --pulse-size: 5px;
+    --glitch-color: rgba(255, 255, 255, 0.3);
+}
+
 /* Global Styles */
 body {
     background-color: var(--dark-bg);
@@ -6,4 +18,141 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+/* Animated Gradient Background */
+#main-container {
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-magenta));
+    animation: gradient-animation 8s ease infinite;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Profile Section */
+#profile {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+#avatar-container {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 50%;
+    border: 4px solid var(--neon-cyan);
+    padding: 5px;
+    animation: spin-gradient 3s linear infinite;
+    box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+#avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: pulse-avatar 1.5s infinite ease-in-out;
+}
+
+h1 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    animation: glitch 1s infinite;
+}
+
+#bio {
+    font-size: 1rem;
+}
+
+/* Link Buttons */
+#links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.link-button {
+    background: none;
+    border: 2px solid transparent;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--font-color-light);
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.link-button i {
+    margin-right: 10px;
+}
+
+.link-button:hover {
+    color: var(--neon-cyan);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--neon-cyan);
+    border-color: var(--neon-magenta);
+    animation: hover-glow 1.5s ease-out infinite;
+}
+
+.link-button:active {
+    transform: scale(0.98);
+}
+
+/* Countdown Timer */
+#countdown {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#countdown-timer {
+    font-weight: bold;
+    color: var(--neon-magenta);
+}
+
+/* Footer Stats */
+footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: var(--font-color-light);
+}
+
+/* Animations */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes spin-gradient {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse-avatar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes glitch {
+    0% { text-shadow: -2px 0 var(--glitch-color), 2px 0 var(--glitch-color); }
+    25% { text-shadow: 2px 0 var(--glitch-color), -2px 0 var(--glitch-color); }
+    50% { text-shadow: -2px 0 var(--glitch-color), 2px 0 var(--glitch-color); }
+    100% { text-shadow: -2px 0 var(--glitch-color), 2px 0 var(--glitch-color); }
+}
+
+/* Hover Glow Effect */
+@keyframes hover-glow {
+    0% { box-shadow: 0 0 5px var(--neon-cyan); }
+    100% { box-shadow: 0 0 20px var(--neon-magenta); }
 }
