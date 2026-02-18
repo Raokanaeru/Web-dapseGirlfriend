@@ -1,148 +1,44 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dapse GF</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background: url('https://www.transparenttextures.com/patterns/flowers.png') repeat, #ffe6f0;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    .social-links {
-      position: fixed;
-      top: 15px;
-      right: 20px;
-      z-index: 999;
-    }
-
-    .social-links a {
-      margin-left: 10px;
-      text-decoration: none;
-      font-size: 16px;
-      color: #e91e63;
-      background: #fff;
-      padding: 6px 12px;
-      border-radius: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-
-    .social-links a:hover {
-      background-color: #f8bbd0;
-      color: white;
-    }
-
-    h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 36px;
-      color: #e91e63;
-      margin-top: 80px;
-    }
-
-    p {
-      color: #555;
-      font-size: 18px;
-      margin: 10px 20px 30px;
-    }
-
-    .horizontal-gallery {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-      overflow-x: auto;
-      padding: 20px;
-      margin: 0 20px;
-      scroll-snap-type: x mandatory;
-    }
-
-    .photo-box {
-      background: white;
-      padding: 10px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      min-width: 200px;
-      scroll-snap-align: start;
-    }
-
-    .photo-box img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      border-radius: 15px;
-    }
-
-    .caption {
-      margin-top: 10px;
-      font-weight: bold;
-      color: #e91e63;
-      font-size: 16px;
-    }
-
-    footer {
-      background-color: #ffc0cb;
-      padding: 20px;
-      font-size: 16px;
-      color: #fff;
-      font-family: 'Pacifico', cursive;
-      margin-top: 30px;
-    }
-
-    .horizontal-gallery::-webkit-scrollbar {
-      display: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Clash+Display&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script> <!-- Particles.js -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Link ke CSS -->
 </head>
 <body>
+    <!-- Konten HTML dari halaman Linktree Premium -->
+    <div id="main-container">
+        <section id="profile">
+            <div id="avatar-container">
+                <img src="assets/profile.jpg" alt="Avatar" id="avatar">
+            </div>
+            <h1 id="name">Your Name</h1>
+            <p id="bio">Your bio goes here.</p>
+        </section>
 
-  <div class="social-links">
-    <a href="https://instagram.com/nioamirtysaanty" target="_blank">📸 IG</a>
-    <a href="https://tiktok.com/@dapseworld" target="_blank">🎵 TikTok</a>
-    <a href="https://wa.me/6288986283077" target="_blank">💬 WA</a>
-  </div>
+        <section id="links">
+            <button class="link-button"><i class="fas fa-home"></i> Home</button>
+            <button class="link-button"><i class="fas fa-user"></i> About</button>
+            <button class="link-button"><i class="fas fa-envelope"></i> Contact</button>
+        </section>
 
-  <h1>💕 Dapse Gf 💕</h1>
-  <p>Foto-foto ini adalah wujud asli pacar/istri dapse 😹💗</p>
+        <section id="countdown">
+            <p id="timer">Flash Sale ends in: <span id="countdown-timer"></span></p>
+        </section>
 
-  <div class="horizontal-gallery">
-    <div class="photo-box">
-      <img src="https://files.catbox.moe/7y1xsi.jpg" alt="Pacar Cantik 1">
-      <div class="caption">Karina Aespa 🌺</div>
+        <section id="music-player">
+            <button id="play-pause-btn"><i class="fas fa-play"></i></button>
+        </section>
+
+        <footer>
+            <div id="stats">Total Visitors: <span id="visitor-count">100</span></div>
+        </footer>
     </div>
-    <div class="photo-box">
-      <img src="https://files.catbox.moe/jaide4.jpg" alt="Pacar Cantik 2">
-      <div class="caption">Ningning Aespa 🖤</div>
-    </div>
-    <div class="photo-box">
-      <img src="https://files.catbox.moe/b6g6v4.jpg" alt="Pacar Cantik 3">
-      <div class="caption">Asa Babymonster 💕</div>
-    </div>
-    <div class="photo-box">
-      <img src="https://files.catbox.moe/b7avrj.jpg" alt="Pacar Cantik 4">
-      <div class="caption">Wonyoung IVE 🌸</div>
-    </div>
-  </div>
-
-  <footer>
-    I love You 😹💘
-  </footer>
-  <!-- Deskripsi para wanita -->
-<section style="background-color:#fff0f5; padding: 30px 20px; text-align: left; font-size: 16px; color: #444; line-height: 1.6;">
-  <h2 style="color: #e91e63; font-family: 'Pacifico', cursive; text-align: center;">Tentang Mereka 💕</h2>
-
-  <p><strong>🌺 Karina Aespa</strong> adalah seorang penyanyi dan rapper Korea Selatan yang merupakan anggota dan pemimpin girl grup Aespa, yang dibentuk oleh SM Entertainment pada November 2020. Nama aslinya adalah Yu Ji-min, dan dia lahir pada 11 April 2000 di Suwon, Korea Selatan. Karina dikenal karena kemampuan multifasetnya dalam menari, menyanyi, dan melakukan rap.</p>
-
-  <p><strong>🖤 Ningning Aespa</strong> adalah seorang penyanyi dan penari Tiongkok yang bergabung dengan girl grup K-Pop Aespa di bawah naungan SM Entertainment. Nama aslinya adalah Ning Yizhuo, dan dia lahir pada 23 Oktober 2002 di Harbin, China. Ningning dikenal sebagai vokalis utama dan maknae (anggota termuda) di Aespa.</p>
-
-  <p><strong>💕 Asa Babymonster</strong> adalah salah satu anggota dari girl group BABYMONSTER, grup wanita di bawah naungan YG Entertainment yang dikenal sebagai "adik" dari BLACKPINK karena berasal dari agensi yang sama.
-</p>
-
-  <p><strong>🌸 Wonyoung IVE</strong> adalah seorang penyanyi Korea Selatan yang bergabung dengan girl grup IVE di bawah naungan Starship Entertainment. Berikut beberapa fakta tentang dirinya</p>
-</section>
-
+    
+    <script src="js/script.js"></script> <!-- Link ke JavaScript -->
 </body>
 </html>
